@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap');
+
+:root {
+    --primary-soft-red: hsl(10, 79%, 65%);
+    --primary-cyan: hsl(186, 34%, 60%);
+    --neutral-dark-brown: hsl(25, 47%, 15%);
+    --neutral-medium-brown: hsl(28, 10%, 53%);
+    --neutral-cream: hsl(27, 66%, 92%);
+    --neutral-very-pale-orange: hsl(33, 100%, 98%);
+    --primary-font-family: "DM Sans", sans-serif;
+    --default-font-size: 18px;
+    --default-font-normal: 400;
+    --default-font-bold: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: var(--default-font-size);
+    font-family: var(--primary-font-family);
+    font-weight: var(--default-font-normal);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: var(--neutral-cream);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.balance {
+    background-color: var(--primary-soft-red);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    color: var(--neutral-very-pale-orange);
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.balance .label {
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.balance .number {
+    font-weight: var(--default-font-bold);
+    font-size: 1.25rem;
+}
+
+.spending {
+    background-color: var(--neutral-very-pale-orange);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: var(--default-font-bold);
+    margin-bottom: 3rem;
+}
+
+.chart {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1.25rem;
+}
+
+.chart-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    text-align: center;
+    position: relative;
+
+}
+
+.active-component {
+    position: absolute;
+    top: -2rem;
+    left: -0.25rem;
+    font-size: 0.75rem;
+    padding: 0.25rem;
+    background-color: var(--neutral-dark-brown);
+    color: var(--neutral-cream);
+    font-weight: var(--default-font-bold);
+    border-radius: 0.25rem;
+
+    display: none;
+}
+
+.chart-item .rectangle {
+    width: 2rem;
+    height: 5rem;
+    background-color: var(--primary-soft-red);
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.chart-item.highest .rectangle {
+    background-color: var(--primary-cyan);
+}
+
+.chart-item .rectangle:hover {
+    opacity: 0.5;
+}
+
+.chart-item .label {
+    font-size: 0.75rem;
+    color: var(--neutral-medium-brown);
+}
+
+hr {
+    height: 2px;
+    background-color: var(--neutral-cream);
+    border: none;
+}
+
+.total-spending {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col-1 .label {
+    font-size: 0.75rem;
+    color: var(--neutral-medium-brown);
+}
+
+.col-1 .number {
+    font-size: 2rem;
+    color: var(--neutral-dark-brown);
+    font-weight: var(--default-font-bold);
+}
+
+.col-2 {
+    align-self: last baseline;
+    text-align: end;
+}
+
+.col-2 .number {
+    font-size: 0.75rem;
+    color: var(--neutral-dark-brown);
+    font-weight: var(--default-font-bold);
+}
+
+.col-2 .label {
+    font-size: 0.75rem;
+    color: var(--neutral-medium-brown);
+}

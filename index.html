@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Expenses chart component</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="balance">
+      <div class="balance-info">
+        <p class="label">My balance</p>
+        <p class="number">$921.48</p>
+      </div>
+      <img src="./images/logo.svg" alt="Logo" id="balance-logo">
+    </div>
+    <div class="spending">
+      <div class="spending-by-days">
+        <h1>Spending - Last 7 days</h1>
+        <div class="chart">
+          <div class="chart-item" id="mon">
+            <p class="active-component">$17.45</p>
+            <div class="rectangle"></div>
+            <p class="label">mon</p>
+          </div>
+
+          <div class="chart-item" id="tue">
+            <p class="active-component">$17.45</p>
+            <div class="rectangle"></div>
+            <p class="label">tue</p>
+          </div>
+
+          <div class="chart-item highest" id="wed">
+            <p class="active-component">$17.45</p>
+            <div class="rectangle"></div>
+            <p class="label">wed</p>
+          </div>
+
+          <div class="chart-item" id="thu">
+            <p class="active-component">$17.45</p>
+            <div class="rectangle"></div>
+            <p class="label">thu</p>
+          </div>
+
+          <div class="chart-item" id="fri">
+            <p class="active-component">$17.45</p>
+            <div class="rectangle"></div>
+            <p class="label">fri</p>
+          </div>
+
+          <div class="chart-item" id="sat">
+            <p class="active-component">$17.45</p>
+            <div class="rectangle"></div>
+            <p class="label">sat</p>
+          </div>
+
+          <div class="chart-item" id="sun">
+            <p class="active-component">$17.45</p>
+            <div class="rectangle"></div>
+            <p class="label">sun</p>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="total-spending">
+        <div class="col-1">
+          <p class="label">Total this month</p>
+          <p class="number">$478.33</p>
+        </div>
+        <div class="col-2">
+          <p class="number">+2.4%</p>
+          <p class="label">from last month</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./index.js"></script>
+</body>
+
+</html>
