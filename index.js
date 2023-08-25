@@ -8,15 +8,17 @@ function renderChartItems(data) {
     onActiveData.innerHTML = data[i].amount;
     chartItem.style.height = `${data[i].amount * chartItemScale}px`;
     
-    // currentItem.addEventListener("hover", () => {handleHover(currentItem.id)});
-    currentItem.addEventListener("hover", handleHover);
-
+    currentItem.addEventListener("mouseover", handleMouseOver);
+    currentItem.addEventListener("mouseout", handleMouseOut);
   }
 }
 
-function handleHover() {
-    this.children[0].display = "initial"
-    console.log(this.children[0])
+function handleMouseOver() {
+  this.children[0].style.display = "block"
+}
+
+function handleMouseOut() {
+  this.children[0].style.display = "none"
 }
 
 fetch("./data.json")
